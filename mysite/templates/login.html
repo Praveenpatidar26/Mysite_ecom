@@ -1,0 +1,22 @@
+{% extends 'my-account.html' %}
+
+{% block middle_part %}
+<div style="margin: 70px;">
+<center>
+<h5 style="color=red;"> {{ msg }}</h5>
+<h1 style="margin-bottom: 40px;"> Sign In </h1>
+<form method="POST" action="/login/" >
+{% csrf_token %}
+<label for="email" > Username </label>
+<input type="email" placeholder="Enter E-mail" name="email">
+<br><br>
+<label for="password">Password</label>
+<input type="password" name="password" placeholder="Enter Password">
+<br><br>
+
+<button type="submit" name="s" value="login">Sign In</button>
+</form>
+</center>
+</div>
+
+{% endblock middle_part %}
